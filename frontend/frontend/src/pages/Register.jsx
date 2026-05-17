@@ -10,6 +10,7 @@ function Register() {
     name: "",
     email: "",
     password: "",
+    role: "member",
   });
 
   const handleChange = (e) => {
@@ -64,6 +65,17 @@ function Register() {
             className="w-full border p-3 rounded"
             onChange={handleChange}
           />
+
+          <select
+            name="role"
+            value={formData.role}
+            onChange={handleChange}
+            className="w-full border p-3 rounded"
+          >
+            <option value="member">Member</option>
+
+            <option value="admin">Admin</option>
+          </select>
 
           <button className="w-full bg-black text-white p-3 rounded">
             Register
